@@ -1,24 +1,51 @@
-# Lumen PHP Framework
+# API SERIES
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Configurações Recomendadas para rodar a aplicação.
 
-## Official Documentation
+A estrutura do Lumen tem alguns requisitos de sistema para o seu funcionamento.
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+ * PHP >= 7.3
+ * OpenSSL PHP Extension
+ * PDO PHP Extension
+ * Mbstring PHP Extension
 
-## Contributing
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Security Vulnerabilities
+## Instalação Lumen aplicação.
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+ O Lumen utiliza o Composer para gerenciar suas dependências. Portanto, antes de usar o Lumen, certifique-se de ter o Composer instalado em sua máquina.
 
-## License
+ * Encontrará o mesmo no seguinte dependências https://getcomposer.org/.
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+ Instale o Lumen com o seguinte comando "Composer create-project" em seu terminal:
+
+ * composer create-project --prefer-dist laravel/lumen "nome-do-projeto"
+
+
+## Servidor da aplicação.
+
+ Para rodar o seu projeto localmente, você pode usar a máquina virtual Laravel Homestead, Laravel Valet ou o servidor de desenvolvimento PHP embutido:
+
+ * php -S localhost:8000 -t public
+
+
+## Configurações.
+
+ Todas as opções de configuração para a estrutura do Lumen são armazenadas no arquivo .env. Depois de instalar o Lumen, você também deve configurar seu ambiente local.
+
+
+## Chave de segurança.
+
+ A próxima coisa que você deve fazer após instalar o Lumen é definir a chave do aplicativo como uma string aleatória. Normalmente, essa string deve ter 32 caracteres. A chave pode ser definida no arquivo de ambiente .env. Se você não renomeou o arquivo .env.example para .env, deve fazer isso agora. Se a chave do aplicativo não for definida, os dados criptografados do usuário não estarão seguros!
+
+## Compatibilidade.
+
+ Como o Lumen é um framework totalmente separado do Laravel, ele não oferece intencionalmente compatibilidade com nenhuma biblioteca adicional do Laravel como Cashier, Passport, Scout, etc. Se sua aplicação requer a funcionalidade fornecida por essas bibliotecas, por favor, use o framework Laravel.
+
+ * Aplicação é compativel com os sistemas operacional Windowns e Linux.
+
+
+ * Para mais informações acessar a documentação oficial do lumen https://lumen.laravel.com/.
+
