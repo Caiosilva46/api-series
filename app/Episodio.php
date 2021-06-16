@@ -8,6 +8,7 @@ class Episodio extends model
 {
     public $timestamps = false;
     protected $fillable = ['temporada', 'numero', 'assistido', 'serie_id'];
+    protected $appends = ['links'];
 
     public function serie()
     {
@@ -17,5 +18,13 @@ class Episodio extends model
     public function getAssistidoAtribbute($assistido): bool
     {
         return $assistido;
+    }
+
+    public function getLinksAttribute($links): array
+    {
+        return [
+            'self' => '/api/episodios/' . $this->serie_id,
+            'serie' => '/api/series/' . $this->serie_id,
+        ];
     }
 }
